@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-11T12:44:57 IST" name="Suite" finished-at="2024-02-11T12:46:36 IST" duration-ms="99740">
+    <groups>
+      <group name="regression">
+        <method signature="TC_001_Registration.test_travelInsurancebuttonClick()[pri:1, instance:TestCases.TC_001_Registration@743cb8e0]" name="test_travelInsurancebuttonClick" class="TestCases.TC_001_Registration"/>
+        <method signature="TC_001_Registration.test_TravelInsurance()[pri:2, instance:TestCases.TC_001_Registration@743cb8e0]" name="test_TravelInsurance" class="TestCases.TC_001_Registration"/>
+        <method signature="TC_002_CarInsurance.test_carInsurance()[pri:3, instance:TestCases.TC_002_CarInsurance@4eed46ee]" name="test_carInsurance" class="TestCases.TC_002_CarInsurance"/>
+        <method signature="TC_002_CarInsurance.test_carInsurance1()[pri:4, instance:TestCases.TC_002_CarInsurance@4eed46ee]" name="test_carInsurance1" class="TestCases.TC_002_CarInsurance"/>
+        <method signature="TC_003_CarInsurance1.test_carInsurancenegetive()[pri:5, instance:TestCases.TC_003_CarInsurance1@36b0fcd5]" name="test_carInsurancenegetive" class="TestCases.TC_003_CarInsurance1"/>
+        <method signature="TC_003_CarInsurance1.test_carInsuranceerrormessagevalidation()[pri:6, instance:TestCases.TC_003_CarInsurance1@36b0fcd5]" name="test_carInsuranceerrormessagevalidation" class="TestCases.TC_003_CarInsurance1"/>
+        <method signature="TC_003_CarInsurance1.test_carInsurancenegetivetestcase()[pri:7, instance:TestCases.TC_003_CarInsurance1@36b0fcd5]" name="test_carInsurancenegetivetestcase" class="TestCases.TC_003_CarInsurance1"/>
+        <method signature="TC_004_CarInsurance2.test_carInsurancepositive()[pri:8, instance:TestCases.TC_004_CarInsurance2@4fad94a7]" name="test_carInsurancepositive" class="TestCases.TC_004_CarInsurance2"/>
+        <method signature="TC_004a_CarInsurance2.test_carInsuranceQuote()[pri:9, instance:TestCases.TC_004a_CarInsurance2@475835b1]" name="test_carInsuranceQuote" class="TestCases.TC_004a_CarInsurance2"/>
+        <method signature="TC_005_HealthInsurance.test_healthInsurance()[pri:10, instance:TestCases.TC_005_HealthInsurance@6326d182]" name="test_healthInsurance" class="TestCases.TC_005_HealthInsurance"/>
+        <method signature="TC_005_HealthInsurance.test_healthInsurancemotor()[pri:11, instance:TestCases.TC_005_HealthInsurance@6326d182]" name="test_healthInsurancemotor" class="TestCases.TC_005_HealthInsurance"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="TC_001_Registration.test_travelInsurancebuttonClick()[pri:1, instance:TestCases.TC_001_Registration@743cb8e0]" name="test_travelInsurancebuttonClick" class="TestCases.TC_001_Registration"/>
+        <method signature="TC_002_CarInsurance.test_carInsurance()[pri:3, instance:TestCases.TC_002_CarInsurance@4eed46ee]" name="test_carInsurance" class="TestCases.TC_002_CarInsurance"/>
+        <method signature="TC_005_HealthInsurance.test_healthInsurance()[pri:10, instance:TestCases.TC_005_HealthInsurance@6326d182]" name="test_healthInsurance" class="TestCases.TC_005_HealthInsurance"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test started-at="2024-02-11T12:44:57 IST" name="Test" finished-at="2024-02-11T12:46:36 IST" duration-ms="99740">
+      <class name="TestCases.TC_003_CarInsurance1">
+        <test-method signature="test_carInsurancenegetive()[pri:5, instance:TestCases.TC_003_CarInsurance1@36b0fcd5]" started-at="2024-02-11T12:46:03 IST" name="test_carInsurancenegetive" finished-at="2024-02-11T12:46:16 IST" duration-ms="13535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_carInsurancenegetive -->
+        <test-method signature="test_carInsuranceerrormessagevalidation()[pri:6, instance:TestCases.TC_003_CarInsurance1@36b0fcd5]" started-at="2024-02-11T12:46:16 IST" name="test_carInsuranceerrormessagevalidation" finished-at="2024-02-11T12:46:16 IST" duration-ms="92" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_carInsuranceerrormessagevalidation -->
+        <test-method signature="test_carInsurancenegetivetestcase()[pri:7, instance:TestCases.TC_003_CarInsurance1@36b0fcd5]" started-at="2024-02-11T12:46:16 IST" name="test_carInsurancenegetivetestcase" finished-at="2024-02-11T12:46:17 IST" duration-ms="619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_carInsurancenegetivetestcase -->
+      </class> <!-- TestCases.TC_003_CarInsurance1 -->
+      <class name="TestCases.TC_004a_CarInsurance2">
+        <test-method signature="test_carInsuranceQuote()[pri:9, instance:TestCases.TC_004a_CarInsurance2@475835b1]" started-at="2024-02-11T12:46:20 IST" name="test_carInsuranceQuote" finished-at="2024-02-11T12:46:32 IST" duration-ms="11939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_carInsuranceQuote -->
+      </class> <!-- TestCases.TC_004a_CarInsurance2 -->
+      <class name="TestCases.TC_004_CarInsurance2">
+        <test-method signature="test_carInsurancepositive()[pri:8, instance:TestCases.TC_004_CarInsurance2@4fad94a7]" started-at="2024-02-11T12:46:17 IST" name="test_carInsurancepositive" finished-at="2024-02-11T12:46:20 IST" duration-ms="3015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_carInsurancepositive -->
+      </class> <!-- TestCases.TC_004_CarInsurance2 -->
+      <class name="TestCases.TC_001_Registration">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC_001_Registration@743cb8e0]" started-at="2024-02-11T12:44:57 IST" name="setup" finished-at="2024-02-11T12:45:11 IST" duration-ms="13260" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_travelInsurancebuttonClick()[pri:1, instance:TestCases.TC_001_Registration@743cb8e0]" started-at="2024-02-11T12:45:11 IST" name="test_travelInsurancebuttonClick" finished-at="2024-02-11T12:45:12 IST" duration-ms="936" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_travelInsurancebuttonClick -->
+        <test-method signature="test_TravelInsurance()[pri:2, instance:TestCases.TC_001_Registration@743cb8e0]" started-at="2024-02-11T12:45:12 IST" name="test_TravelInsurance" finished-at="2024-02-11T12:45:58 IST" duration-ms="46445" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_TravelInsurance -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.TC_001_Registration@743cb8e0]" started-at="2024-02-11T12:46:35 IST" name="teardown" finished-at="2024-02-11T12:46:36 IST" duration-ms="1542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCases.TC_001_Registration -->
+      <class name="TestCases.TC_005_HealthInsurance">
+        <test-method signature="test_healthInsurance()[pri:10, instance:TestCases.TC_005_HealthInsurance@6326d182]" started-at="2024-02-11T12:46:32 IST" name="test_healthInsurance" finished-at="2024-02-11T12:46:33 IST" duration-ms="1129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_healthInsurance -->
+        <test-method signature="test_healthInsurancemotor()[pri:11, instance:TestCases.TC_005_HealthInsurance@6326d182]" started-at="2024-02-11T12:46:33 IST" name="test_healthInsurancemotor" finished-at="2024-02-11T12:46:35 IST" duration-ms="1622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_healthInsurancemotor -->
+      </class> <!-- TestCases.TC_005_HealthInsurance -->
+      <class name="TestCases.TC_002_CarInsurance">
+        <test-method signature="test_carInsurance()[pri:3, instance:TestCases.TC_002_CarInsurance@4eed46ee]" started-at="2024-02-11T12:45:58 IST" name="test_carInsurance" finished-at="2024-02-11T12:45:59 IST" duration-ms="1132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_carInsurance -->
+        <test-method signature="test_carInsurance1()[pri:4, instance:TestCases.TC_002_CarInsurance@4eed46ee]" started-at="2024-02-11T12:45:59 IST" name="test_carInsurance1" finished-at="2024-02-11T12:46:03 IST" duration-ms="3574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_carInsurance1 -->
+      </class> <!-- TestCases.TC_002_CarInsurance -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

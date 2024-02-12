@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="os" value="windows"/>
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="Utilities.ExtentReport"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="TestCases.TC_004a_CarInsurance2">
+        <methods>
+          <include name="teardown"/>
+          <include name="test_carInsuranceQuote"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestCases.TC_004a_CarInsurance2 -->
+      <class name="TestCases.TC_003_CarInsurance1">
+        <methods>
+          <include name="teardown"/>
+          <include name="test_carInsuranceerrormessagevalidation"/>
+          <include name="test_carInsurancenegetivetestcase"/>
+          <include name="setup"/>
+          <include name="test_carInsurancenegetive"/>
+        </methods>
+      </class> <!-- TestCases.TC_003_CarInsurance1 -->
+      <class name="TestCases.TC_002_CarInsurance">
+        <methods>
+          <include name="teardown"/>
+          <include name="test_carInsurance1"/>
+          <include name="setup"/>
+          <include name="test_carInsurance"/>
+        </methods>
+      </class> <!-- TestCases.TC_002_CarInsurance -->
+      <class name="TestCases.TC_004_CarInsurance2">
+        <methods>
+          <include name="teardown"/>
+          <include name="test_carInsurancepositive"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestCases.TC_004_CarInsurance2 -->
+      <class name="TestCases.TC_001_Registration">
+        <methods>
+          <include name="teardown"/>
+          <include name="test_TravelInsurance"/>
+          <include name="setup"/>
+          <include name="test_travelInsurancebuttonClick"/>
+        </methods>
+      </class> <!-- TestCases.TC_001_Registration -->
+      <class name="TestCases.TC_005_HealthInsurance">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="test_healthInsurance"/>
+          <include name="test_healthInsurancemotor"/>
+        </methods>
+      </class> <!-- TestCases.TC_005_HealthInsurance -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
