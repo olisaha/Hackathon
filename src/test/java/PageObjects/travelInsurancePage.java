@@ -122,7 +122,9 @@ public class travelInsurancePage extends BasePage {
 
 	public void SelectEndingDate() throws InterruptedException {
 
-		CalenderclickEnd.click();
+		//CalenderclickEnd.click();
+		Actions act1= new Actions(driver);
+		act1.moveToElement(CalenderclickEnd).click().perform();
 		Thread.sleep(2000);
 		String MnthYr2 = "May 2024";
 		while (true) {
