@@ -43,7 +43,7 @@ public class TC_003_CarInsurance1 extends BaseClass {
 		try {
 			carInsurancePage cp = new carInsurancePage(driver);
 			cp.negetivetestcasess();
-			// cp.navigateback2();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

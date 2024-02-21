@@ -1,10 +1,14 @@
 package PageObjects;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -16,11 +20,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class carInsurancePage extends BasePage {
-
+	public Properties p;
 	public carInsurancePage(WebDriver driver) {
 		super(driver);
 	}
-
+	
 //Elements
 
 	@FindBy(xpath = "//button[@id='btnGetQuotes']")
@@ -57,13 +61,13 @@ public class carInsurancePage extends BasePage {
 	// Actions
 	public void proceed() throws InterruptedException, IOException {
 		veiwprice.click();
+		}
+
+	public boolean errormessagevalidation() throws IOException {
 		WebElement msgss = driver.findElement(By.xpath("//div[@class='registeration']"));
 		File src1 = msgss.getScreenshotAs(OutputType.FILE);
 		File trg1 = new File("C:\\Users\\2303442\\git\\Hackathon_CTS\\TravelInsurance\\screenshots\\errormessage1.png");
 		FileUtils.copyFile(src1, trg1);
-	}
-
-	public boolean errormessagevalidation() {
 		String error = errormessage.getText();
 		System.out.println(error);
 
@@ -75,17 +79,21 @@ public class carInsurancePage extends BasePage {
 
 	}
 
-	public void carnoinput() throws InterruptedException {
+	public void carnoinput() throws InterruptedException, IOException {
 		
-Thread.sleep(3000);
-		carinputbox.sendKeys("WB-09-5898");
+		//loading properties file
+		 FileReader file=new FileReader(".//src//test//resources//config.properties");
+		 p=new Properties();
+		 p.load(file);
+		
+         Thread.sleep(3000);
+         carinputbox.sendKeys(p.getProperty("car_num"));
 	}
 
 	public void selectcar() throws InterruptedException {
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", carname);
-		// carname.click();
 		carmodel.click();
 		cartype.click();
 		petrolvar.click();
@@ -94,8 +102,12 @@ Thread.sleep(3000);
 
 	public void filldetailspositivecase() throws InterruptedException, IOException {
 		emailid.clear();
-		emailid.sendKeys("abcxyz11@gmail.com");
-		phnno.sendKeys("9876545876");
+		
+		String eml=RandomStringUtils.randomAlphanumeric(9);
+		emailid.sendKeys(eml+"@gmail.com");//generating valid email-id input
+		
+		String generatedString=RandomStringUtils.randomNumeric(9);
+		phnno.sendKeys("9"+generatedString);//generating phone number
 		Thread.sleep(2000);
 		File srcp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		File trgp = new File("C:\\Users\\2303442\\git\\Hackathon_CTS\\TravelInsurance\\screenshots\\pstvcase.png");
@@ -103,8 +115,9 @@ Thread.sleep(3000);
 	}
 
 	public void filldetailsnegetivecase() throws IOException, InterruptedException {
-		name.sendKeys("xyz abc");
-		emailid.sendKeys("abcxyz11gmail.com");
+		  name.sendKeys(p.getProperty("name"));
+		  String eml2=RandomStringUtils.randomAlphanumeric(9);
+		  emailid.sendKeys(eml2+"gmail.com");// invalid email-id input
 	}
 
 	public boolean mailerrormsgvalidation() {
@@ -146,7 +159,6 @@ Thread.sleep(3000);
 				.getText();
 		System.out.println("There are:" + InsuranceCount);
 		String value = InsuranceCount.substring(0, 1);
-		// System.out.println(value);
 		int j = Integer.parseInt(value);
 		List<WebElement> Carins = driver.findElements(By.xpath("//*[@class=\"headingV3 fontNormal\"]"));
 		System.out.println("IDV cover" + "   " + "claims setteled");
@@ -162,7 +174,7 @@ Thread.sleep(3000);
 		File src1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		File trg1 = new File("C:\\Users\\2303442\\git\\Hackathon_CTS\\TravelInsurance\\screenshots\\carq.png");
 		FileUtils.copyFile(src1, trg1);
-//
+
 	}
 
 }

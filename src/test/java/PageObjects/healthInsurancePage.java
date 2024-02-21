@@ -28,8 +28,8 @@ public class healthInsurancePage extends BasePage {
 
 	String HLTH;
 	ExcelUtility et = new ExcelUtility();
+	
 	// Elements
-
 	@FindBy(xpath = "/html/body/div[5]/div[2]/div/ul/li[2]/div/div/div[3]/ul//a/span")
 	List<WebElement> healthInsuranceLIST;
 

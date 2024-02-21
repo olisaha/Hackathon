@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -92,8 +93,8 @@ public class travelInsurancePage extends BasePage {
 	
 	@FindBy(xpath="//*[@id=\"modal-root\"]/div/div")
 	WebElement popup;
+	
 	// Actions
-
 	public void EnterDestination() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", Germany);
@@ -122,7 +123,6 @@ public class travelInsurancePage extends BasePage {
 
 	public void SelectEndingDate() throws InterruptedException {
 
-		//CalenderclickEnd.click();
 		Actions act1= new Actions(driver);
 		act1.moveToElement(CalenderclickEnd).click().perform();
 		Thread.sleep(2000);
@@ -159,7 +159,7 @@ public class travelInsurancePage extends BasePage {
 
 		nomedicalhistory.click();
 		mywait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class=\"travel_main_cta\"]")));
-		// nxtbutton.click();
+		
 
 	}
 
@@ -168,18 +168,12 @@ public class travelInsurancePage extends BasePage {
 				.visibilityOfElementLocated(By.xpath("//*[@id=\"central-login-input-block-div-id\"]/div")));
 		mobileno.click();
 		WebElement contact = driver.findElement(By.xpath("//input[@id='mobileNumber']"));
-		contact.sendKeys("9876545876");
-
+		String generatedString=RandomStringUtils.randomNumeric(9);
+		contact.sendKeys("9"+generatedString);
 		WebElement viewPlans = driver.findElement(By.xpath("//button[contains(text(),'View plans')]"));
 		viewPlans.click();
 
 	}
-	/*public void popuphandle() {
-		if(popup.isDisplayed()==true) {
-			
-		}
-	}*/
-
 	public void insurancedetails() throws InterruptedException {
 		Thread.sleep(7000);
 		sortbutton.click();
@@ -223,7 +217,6 @@ public class travelInsurancePage extends BasePage {
 	}
 
 	public void navigateback() {
-
 		homepageclick.click();
 	}
 
